@@ -54,7 +54,7 @@ namespace NetworkTask.Common
             }
         }
 
-        private void SendMessageToSubscriber<T>(int connectionId, T message)
+        public void SendMessageToSubscriber<T>(int connectionId, T message)
             where T : struct, NetworkMessage
         {
             var messageId = NetworkMessageId<T>.Id;
